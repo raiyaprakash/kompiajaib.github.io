@@ -1,21 +1,39 @@
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
+<a class="screen-reader-text skip-link" href="#content" title="Skip to content">Skip to content</a>
+<header class="site-header has-inline-mobile-toggle" id="masthead" aria-label="Site" itemtype="https://schema.org/WPHeader" itemscope>
+    <div class="inside-header grid-container">
+        <div class="site-branding">
+  {% if page.url == '/' %}
+            <h1 class="main-title" itemprop="headline">
+					<a href="{{ site.baseurl }}/" rel="home">{{ site.title | escape }}</a>
+				</h1>
+                  {% else %}
+            <p class="main-title" itemprop="headline">
+                <a href="{{ site.baseurl }}/" rel="home">{{ site.title | escape }}</a>
+            </p>
+  {% endif %}
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{ site.baseurl }}/" title="Home">Home</a></li>
-                <li><a href="/about/" title="About">About</a></li>
-                <li><a href="/contact/" title="Contact">Contact</a></li>
-                {% for page in site.pages %}{% if page.title %}{% if page.url contains  "/tags/" or page.url contains  "/search" or page.url contains  "/thanks" or page.url contains  "/404" or page.url contains  "/contact" or page.url contains  "/about" %}{% else %}<li><a href="{{ page.url | prepend: site.baseurl }}" title="{{ page.title }}">{{ page.title }}</a></li>{% endif %}{% endif %}{% endfor %}
-                <li><a href="#modal1" class="nav-search-link" title="Search"><i class='material-icons md-18'>&#59574;</i></a></li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+        <nav class="main-navigation mobile-menu-control-wrapper" id="mobile-menu-control-wrapper" aria-label="Mobile Toggle">
+            <button data-nav="site-navigation" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" /></svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" /></svg></span>
+                <span
+                class="screen-reader-text">Menu</span>
+            </button>
+        </nav>
+        <nav class="main-navigation sub-menu-right" id="site-navigation" aria-label="Primary" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+            <div class="inside-navigation grid-container">
+                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                    <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" /></svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" /></svg></span>
+                    <span
+                    class="mobile-menu">Menu</span>
+                </button>
+                <div id="primary-menu" class="main-nav">
+                    <ul id="menu-primary-menu" class=" menu sf-menu">
+                        <li id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-31">
+                            <a href="{{ site.baseurl }}/">Home</a></li>
+                        <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-32"><a rel="privacy-policy" href="{{ "/privacy-policy/" | prepend: site.baseurl }}">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </div>
-    <!-- /.container -->
-</nav>
+</header>

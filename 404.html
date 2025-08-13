@@ -1,151 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Coretan kisah sebuah kehidupan.">
-    <title>404 - Adhy Suryadi Blog</title>
-    <link rel="canonical" href="http://adhysuryadi.com/">
-    <link href="http://adhysuryadi.com/img/favicon/favicon.ico" rel="icon" type="image/x-icon">
-    <link href="http://adhysuryadi.com/img/favicon/favicon-32x32.png" rel="icon" sizes="32x32">
-    <link href="http://adhysuryadi.com/img/favicon/android-icon-192x192.png" rel="icon" sizes="192x192">
-    <link href="http://adhysuryadi.com/img/favicon/apple-icon-180x180.png" rel="apple-touch-icon-precomposed">
-    <meta content="http://adhysuryadi.com/img/favicon/ms-icon-144x144.png" name="msapplication-TileImage">
-        <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/clean-blog.css">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-<script>
-//<![CDATA[
-function loadCSS(e, t, n) { "use strict"; var i = window.document.createElement("link"); var o = t || window.document.getElementsByTagName("script")[0]; i.rel = "stylesheet"; i.href = e; i.media = "only x"; o.parentNode.insertBefore(i, o); setTimeout(function () { i.media = n || "all" }) }
-loadCSS("http://fonts.googleapis.com/css?family=Raleway:300");
-//]]>
-</script>
-<style>
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-html {
-    height: 100%;
-}
-body {
-    background: url(http://i.imgur.com/CZdBKjO.gif) no-repeat center center fixed; 
-    background-size: cover;
-    font-family: 'Raleway', sans-serif;
-    background-color: #342643; 
-    height: 100%;
-}
-
-.text-wrapper {
-    height: 100%;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-}
-
-.title {
-    font-size: 9em;
-    font-weight: 700;
-    color: white;
-    position:relative;
-}
-
-.subtitle {
-    font-size: 40px;
-    font-weight: 700;
-    color: white;
-    position:relative;
-}
-.buttons p{
-    font-size: 30px;
-    font-weight: 700;
-    color: white;
-    position:relative;
-    text-align: center;
-}
-p a.button {
-        background-color: #342643;
-        font-weight: 700;
-        font-size: 20px;
-        border: 2px solid white;
-        text-decoration: none;
-        padding:8px 15px;
-        text-transform: uppercase;
-        color: white;
-        border-radius: 26px;
-        transition: all 0.2s ease-in-out;
-}
-p a.button:hover {
-            background-color: lighten(#342643, 10%);
-            color: white;
-            transition: all 0.2s ease-in-out;
-        }
-
-// Glitch animation from http://codepen.io/lbebber/pen/ypgql
-@keyframes noise-anim{
-  $steps:20;
-  @for $i from 0 through $steps{
-    #{percentage($i*(1/$steps))}{
-      clip:rect(random(200)+px,9999px,random(200)+px,0);
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>404 – Page Not Found</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #111936;
+      --text: #e6e9f2;
+      --muted: #a0a8c3;
+      --accent: #7aa2ff;
+      --focus: #a6ffcb;
+      --shadow: 0 20px 80px rgba(0,0,0,.35);
     }
-  }
-}
-.subtitle:after, .title:after{
-  content:attr(data-content);
-  position:absolute;
-  left:2px;
-  text-shadow:-1px 0 red;
-  top:0;
-  color:white;
-  overflow:hidden;
-  clip:rect(0,900px,0,0); 
-  animation:noise-anim 2s infinite linear alternate-reverse;
-}
-
-@keyframes noise-anim-2{
-  $steps:20;
-  @for $i from 0 through $steps{
-    #{percentage($i*(1/$steps))}{
-      clip:rect(random(200)+px,9999px,random(200)+px,0);
+    @media (prefers-color-scheme: light) {
+      :root { --bg:#f7f8fc; --panel:#ffffff; --text:#0b1020; --muted:#5b6479; --accent:#3b82f6; --focus:#0ea5e9; --shadow:0 20px 60px rgba(0,0,0,.08); }
     }
-  }
-}
-.subtitle:before, .title:before{
-  content:attr(data-content);
-  position:absolute;
-  left:-2px;
-  text-shadow:1px 0 blue; 
-  top:0;
-  color:white;
-  overflow:hidden;
-  clip:rect(0,900px,0,0); 
-  animation:noise-anim-2 3s infinite linear alternate-reverse;
-}
-</style>
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--text); background: radial-gradient(1200px 800px at 80% -10%, rgba(122,162,255,.20), transparent 60%),
+      radial-gradient(800px 600px at -10% 110%, rgba(166,255,203,.25), transparent 60%), var(--bg);
+      display: grid; place-items: center; padding: 24px;
+    }
+    .card {
+      width: min(720px, 92vw); background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,.08); border-radius: 28px; padding: clamp(24px, 4vw, 40px);
+      box-shadow: var(--shadow); position: relative; overflow: hidden;
+    }
+    .code {
+      position: absolute; inset: -20% -10% auto auto; width: 340px; height: 340px; filter: blur(40px) saturate(1.2); opacity: .15; transform: rotate(25deg);
+      background: conic-gradient(from 180deg at 50% 50%, #7aa2ff, #a6ffcb, #7aa2ff);
+      border-radius: 24px; mask: radial-gradient(circle at 40% 40%, #000 35%, transparent 60%);
+    }
+    h1 { font-size: clamp(42px, 6vw, 80px); letter-spacing: -0.02em; margin: 0 0 8px; line-height: 1; }
+    .subtitle { font-size: clamp(16px, 2.2vw, 18px); color: var(--muted); margin: 0 0 24px; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+    .btn {
+      appearance: none; border: 0; cursor: pointer; padding: 14px 18px; border-radius: 14px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;
+      transition: transform .12s ease, box-shadow .12s ease, background .2s ease; will-change: transform; line-height: 1;
+    }
+    .btn:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+    .btn.primary { background: var(--accent); color: #fff; box-shadow: 0 8px 24px rgba(59,130,246,.35); }
+    .btn.primary:hover { transform: translateY(-1px); }
+    .btn.ghost { background: rgba(255,255,255,.06); color: var(--text); border: 1px solid rgba(255,255,255,.12); }
+    .btn.ghost:hover { background: rgba(255,255,255,.10); transform: translateY(-1px); }
+    .links { margin-top: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; }
+    .link { color: var(--muted); text-decoration: none; font-size: 14px; }
+    .link:hover { color: var(--text); text-decoration: underline; }
+    .badge { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); background: rgba(122,162,255,.15);
+      border: 1px dashed rgba(122,162,255,.35); padding: 6px 10px; border-radius: 999px; display: inline-block; margin-bottom: 12px; }
+    .art { width: 140px; height: 140px; margin-bottom: 16px; }
+    .footer { margin-top: 28px; font-size: 12px; color: var(--muted); }
+  </style>
 </head>
 <body>
-<div class="text-wrapper">
-    <div class="title" data-content="404">
-        404
+  <main class="card" role="main" aria-labelledby="title-404">
+    <div class="code" aria-hidden="true"></div>
+    <svg class="art" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="64" cy="64" r="56" stroke="currentColor" opacity=".12" stroke-width="8"/>
+      <path d="M64 26v28" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+      <circle cx="64" cy="88" r="6" fill="currentColor"/>
+    </svg>
+    <div class="badge" aria-live="polite">Error 404</div>
+    <h1 id="title-404">Page not found</h1>
+    <p class="subtitle">The page you’re looking for may have been moved, deleted, or never existed. Let’s get you back on track.</p>
+    <div class="actions">
+      <a class="btn primary" href="/" aria-label="Go to homepage">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 12l9-8 9 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21V9h6v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back to Home
+      </a>
+      <button class="btn ghost" id="goBackBtn" type="button" aria-label="Go back to previous page">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Go Back
+      </button>
     </div>
 
-    <div class="subtitle" data-content="Oops, the page you're looking for doesn't exist">
-        Oops, the page you're looking for doesn't exist.
-    </div>
+    <p class="footer">Error reference: <span id="ref">#404</span></p>
+  </main>
 
-    <div class="buttons">
-    	<p>You can search what you were looking for <a class="button" href="http://adhysuryadi.com/#modal1">here</a><br>
-                       Or you can go to <a class="button" href="http://adhysuryadi.com/">Homepage</a></p>
-    </div>
-</div>
-<!--</body>--></body>
+  <script>
+    // Try to provide a small error reference based on URL
+    (function () {
+      const ref = document.getElementById('ref');
+      const u = new URL(window.location.href);
+      const hash = (u.pathname + u.search).split('').reduce((a,c)=>((a<<5)-a + c.charCodeAt(0))|0,0);
+      ref.textContent = '#' + Math.abs(hash).toString(36).slice(0,6);
+    })();
+
+    // Go back button
+    document.getElementById('goBackBtn').addEventListener('click', function () {
+      if (history.length > 1) {
+        history.back();
+      } else {
+        window.location.href = '/';
+      }
+    });
+  </script>
+</body>
 </html>
-

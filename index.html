@@ -4,21 +4,38 @@ subtitle: "Coretan kisah sebuah kehidupan."
 description: "Coretan kisah sebuah kehidupan, berbagi dengan sesama tentang pengalaman hidup."
 ---
 
+
+	<div class="site grid-container container hfeed" id="page">
+				<div class="site-content" id="content">
+			
+	<div class="content-area" id="primary">
+		<main class="site-main" id="main">
+
 {% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
+
+<article id="post-85" class="post-85 post type-post status-publish format-standard has-post-thumbnail hentry category-govt-scheme" itemtype="https://schema.org/CreativeWork" itemscope="">
+	<div class="inside-article">
+					<header class="entry-header">
+				<h2 class="entry-title" itemprop="headline"><a href="{{ post.url | prepend: site.baseurl }}" rel="bookmark">{{ post.title }}</a></h2>		<div class="entry-meta">
+			<span class="posted-on"><time class="entry-date published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished dateModified">{{ page.date | date: "%B %-d, %Y" }}</time></span> <span class="byline">by <span class="author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope=""><a class="url fn n" href="/" title="View all posts by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %}" rel="author" itemprop="url"><span class="author-name" itemprop="name">{% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %}</span></a></span></span> 		</div>
+					</header>
+			<div class="post-image">
+						
+						<a href="{{ post.url | prepend: site.baseurl }}">
+							<img width="1280" height="720" src="{{site.url}}{{ site.baseurl }}/{% if page.image %}{{ page.image }}{% else %}{{ site.image }}{% endif %}" class="attachment-full size-full wp-post-image" alt="अभी भी 55 हज़ार बच्चों को नहीं मिला स्कूल, सरकार करेगी सख्त कार्रवाई" itemprop="image" title="{{ post.title }} 9">
+						</a>
+					</div>{% if post.subtitle %}
+			<div class="entry-summary" itemprop="text">
+				<p>{{ post.subtitle }} … <a title="{{ post.title }}" class="read-more" href="{{ post.url | prepend: site.baseurl }}" aria-label="Read more about {{ post.title }}">Read more</a></p>
+			</div>
         {% endif %}
-    </a>
-   <p class="post-meta">Posted by <span class='post-author vcard' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'><span itemprop='name'>{% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %}</span></span> on <time itemprop="datePublished dateModified" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time></p>
-</div>
-<hr>
+
+
+			</div>
+</article>
+
 {% endfor %}
+
 <!-- Pager -->
 {% if paginator.total_pages > 1 %}
 <ul class="pager">
@@ -34,3 +51,8 @@ description: "Coretan kisah sebuah kehidupan, berbagi dengan sesama tentang peng
     {% endif %}
 </ul>
 {% endif %}
+</main>
+</div>
+{% include sidebar.html %}
+</div>
+</div>

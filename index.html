@@ -22,7 +22,7 @@ description: "Coretan kisah sebuah kehidupan, berbagi dengan sesama tentang peng
 			<div class="post-image">
 						
 						<a href="{{ post.url | prepend: site.baseurl }}">
-							<img width="1280" height="720" src="{{site.url}}{{ site.baseurl }}/{% if page.image %}{{ page.image }}{% else %}{{ site.image }}{% endif %}" class="attachment-full size-full wp-post-image" alt="अभी भी 55 हज़ार बच्चों को नहीं मिला स्कूल, सरकार करेगी सख्त कार्रवाई" itemprop="image" title="{{ post.title }} 9">
+							<img width="1280" height="720" src="{{site.url}}{{ site.baseurl }}/{% if post.image %}{{ post.image }}{% else %}{{ site.image }}{% endif %}" class="attachment-full size-full wp-post-image" alt="{{ post.title }}" itemprop="image" title="{{ post.title }}">
 						</a>
 					</div>{% if post.subtitle %}
 			<div class="entry-summary" itemprop="text">

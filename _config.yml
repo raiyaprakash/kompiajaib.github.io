@@ -16,7 +16,7 @@ email_username:  kompiajaib@gmail.com
 markdown: kramdown
 highlighter: rouge
 permalink: /:title/
-paginate: 5
+paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
 gems: [jekyll-paginate, jekyll-feed, jekyll-sitemap]

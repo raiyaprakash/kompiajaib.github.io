@@ -24,11 +24,11 @@ description: "Coretan kisah sebuah kehidupan, berbagi dengan sesama tentang peng
 						<a href="{{ post.url | prepend: site.baseurl }}">
 							<img width="1280" height="720" src="{{site.url}}{{ site.baseurl }}/{% if post.image %}{{ post.image }}{% else %}{{ site.image }}{% endif %}" class="attachment-full size-full wp-post-image" alt="{{ post.title }}" itemprop="image" title="{{ post.title }}">
 						</a>
-					</div>{% if post.subtitle %}
+					</div>
 			<div class="entry-summary" itemprop="text">
-				<p>{{ post.subtitle }} … <a title="{{ post.title }}" class="read-more" href="{{ post.url | prepend: site.baseurl }}" aria-label="Read more about {{ post.title }}">Read more</a></p>
+				<p>{{ post.excerpt | strip_html | truncatewords:25 }} … <a title="{{ post.title }}" class="read-more" href="{{ post.url | prepend: site.baseurl }}" aria-label="Read more about {{ post.title }}">Read more</a></p>
 			</div>
-        {% endif %}
+        
 
 
 			</div>

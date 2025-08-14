@@ -11,6 +11,8 @@ twitter_username: adhysuryadiii
 github_username:  KompiAjaib
 facebook_username:  adhysuryadiii
 email_username:  kompiajaib@gmail.com
+timezone: Asia/Kolkata
+
 
 # Build settings
 markdown: kramdown

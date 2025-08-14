@@ -14,13 +14,8 @@ layout: default
 			<img width="1280" height="720" src="{{site.url}}{{ site.baseurl }}/{% if page.image %}{{ page.image }}{% else %}{{ site.image }}{% endif %}" class="attachment-full size-full wp-post-image" alt="{{ page.title }}" itemprop="image"/>		</div>
 					<header class="entry-header">
 				<h1 class="entry-title" itemprop="headline">{{ page.title }}</h1>
-                                    {% if page.subtitle %}
-                    <h2 class="subheading">{{ page.subtitle }}</h2>
-                    {% endif %}
-                    
-                    <div class="entry-meta">
-			<span class="posted-on"><time class="entry-date published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished dateModified">{{ page.date | date: "%B %-d, %Y" }}</time></span> <span class="byline">by <span class="author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope><a class="url fn n" href="/" title="View all posts by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}" rel="author" itemprop="url"><span class="author-name" itemprop="name">{% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}</span></a></span></span> 		</div>
-					</header>
+{% include page-meta.html %}
+</header>
 		<div class="entry-content" itemprop="text">
             {{ content }}
 <!-- CONTENT END 1 -->

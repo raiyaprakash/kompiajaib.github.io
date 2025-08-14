@@ -1,56 +1,41 @@
 ---
 layout: default
-pagination:
-  enabled: true
-  per_page: 5
-  sort_field: 'date'
-  sort_reverse: true
-  tag: "{{ page.tag }}"
 ---
 
-<h3>Posts marked with: {{ page.tag }}</h3>
-<hr>
+	<div class="site grid-container container hfeed" id="page">
+				<div class="site-content" id="content">
+			
+	<div class="content-area" id="primary">
+		<main class="site-main" id="main">
+<header class="page-header" aria-label="Page">
+<h1 class="page-title">{{ page.tag }}</h1>
+</header>
+{% unless page.content == '' %}
+  <p>{{ page.content }}</p>
+{% endunless %}
 
-{% unless paginator.posts.size > 0 %}
+{% unless site.tags[page.tag] | size > 0 %}
   <p>No posts found.</p>
 {% endunless %}
 
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | relative_url }}">
-        <h2 class="post-title">{{ post.title }}</h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-        {% endif %}
-    </a>
-    <p class="post-meta">
-      Posted by 
-      {% if post.author %}
-        {{ post.author }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-      on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
-</div>
-<hr>
+{% for post in site.tags[page.tag] %}
+<article id="post-85" class="post-85 post type-post status-publish format-standard has-post-thumbnail hentry category-govt-scheme" itemtype="https://schema.org/CreativeWork" itemscope="">
+	<div class="inside-article">
+					<header class="entry-header">
+				<h2 class="entry-title" itemprop="headline"><a href="{{ post.url | prepend: site.baseurl }}" rel="bookmark">{{ post.title }}</a></h2>		<div class="entry-meta">
+			<span class="posted-on"><time class="entry-date published" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished dateModified">{{ page.date | date: "%B %-d, %Y" }}</time></span> <span class="byline">by <span class="author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope=""><a class="url fn n" href="/" title="View all posts by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %}" rel="author" itemprop="url"><span class="author-name" itemprop="name">{% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %}</span></a></span></span> 		</div>
+					</header>
+			<div class="entry-summary" itemprop="text">
+				<p>{{ post.excerpt | strip_html | truncatewords:25 }} … <a title="{{ post.title }}" class="read-more" href="{{ post.url | prepend: site.baseurl }}" aria-label="Read more about {{ post.title }}">Read more</a></p>
+			</div>
+        
+
+
+			</div>
+</article>
 {% endfor %}
-
-<!-- Pagination Navigation -->
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
-  {% endif %}
-
-  {% for page_num in (1..paginator.total_pages) %}
-    {% if page_num == paginator.page %}
-      <span class="current">{{ page_num }}</span>
-    {% else %}
-      <a href="{{ paginator.paginate_path | relative_url | replace: ':num', page_num }}">{{ page_num }}</a>
-    {% endif %}
-  {% endfor %}
-
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
-  {% endif %}
+</main>
+</div>
+{% include sidebar.html %}
+</div>
 </div>

@@ -1,28 +1,26 @@
 ---
-layout: page
+layout: default
+pagination:
+  enabled: true
+  per_page: 5
+  sort_field: 'date'
+  sort_reverse: true
+  tag: "{{ page.tag }}"
 ---
-<h3>Posts marked with: {{ page.tag }}</h3>
 
+<h3>Posts marked with: {{ page.tag }}</h3>
 <hr>
 
-{% unless page.content == '' %}
-  <p>{{ page.content }}</p>
-{% endunless %}
-
-{% unless site.tags[page.tag] | size > 0 %}
+{% unless paginator.posts.size > 0 %}
   <p>No posts found.</p>
 {% endunless %}
 
-{% for post in site.tags[page.tag] %}
+{% for post in paginator.posts %}
 <div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">            
-            {{ post.title }}
-        </h2>
+    <a href="{{ post.url | relative_url }}">
+        <h2 class="post-title">{{ post.title }}</h2>
         {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
+        <h3 class="post-subtitle">{{ post.subtitle }}</h3>
         {% endif %}
     </a>
     <p class="post-meta">
@@ -31,9 +29,28 @@ layout: page
         {{ post.author }}
       {% else %}
         {{ site.title }}
-      {% endif %} 
+      {% endif %}
       on {{ post.date | date: "%B %-d, %Y" }}
     </p>
 </div>
 <hr>
 {% endfor %}
+
+<!-- Pagination Navigation -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
+  {% endif %}
+
+  {% for page_num in (1..paginator.total_pages) %}
+    {% if page_num == paginator.page %}
+      <span class="current">{{ page_num }}</span>
+    {% else %}
+      <a href="{{ paginator.paginate_path | relative_url | replace: ':num', page_num }}">{{ page_num }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+  {% endif %}
+</div>

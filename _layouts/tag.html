@@ -26,7 +26,7 @@ layout: default
 			<span class="posted-on"><time class="entry-date published" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished dateModified">{{ page.date | date: "%B %-d, %Y" }}</time></span> <span class="byline">by <span class="author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope=""><a class="url fn n" href="/" title="View all posts by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %}" rel="author" itemprop="url"><span class="author-name" itemprop="name">{% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %}</span></a></span></span> 		</div>
 					</header>
 			<div class="entry-summary" itemprop="text">
-				<p>{{ post.excerpt | strip_html | truncatewords:25 }} … <a title="{{ post.title }}" class="read-more" href="{{ post.url | prepend: site.baseurl }}" aria-label="Read more about {{ post.title }}">Read more</a></p>
+				<p>{{ post.excerpt | strip_html | truncatewords:20 }} … <a title="{{ post.title }}" class="read-more" href="{{ post.url | prepend: site.baseurl }}" aria-label="Read more about {{ post.title }}">Read more</a></p>
 			</div>
         
 

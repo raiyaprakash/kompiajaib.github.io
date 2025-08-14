@@ -18,8 +18,6 @@ highlighter: rouge
 permalink: /:title/
 paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-plugins:
-  - jekyll-paginate-v2
 
 
 gems: [jekyll-paginate, jekyll-feed, jekyll-sitemap]

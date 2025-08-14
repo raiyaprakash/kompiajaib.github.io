@@ -17,7 +17,7 @@ description: "Coretan kisah sebuah kehidupan, berbagi dengan sesama tentang peng
 	<div class="inside-article">
 					<header class="entry-header">
 				<h2 class="entry-title" itemprop="headline"><a href="{{ post.url | prepend: site.baseurl }}" rel="bookmark">{{ post.title }}</a></h2>		<div class="entry-meta">
-			<span class="posted-on"><time class="entry-date published" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished dateModified">{{ page.date | date: "%B %-d, %Y" }}</time></span> <span class="byline">by <span class="author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope=""><a class="url fn n" href="/" title="View all posts by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %}" rel="author" itemprop="url"><span class="author-name" itemprop="name">{% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %}</span></a></span></span> 		</div>
+			<span class="posted-on"><time class="entry-date published" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished dateModified">{{ post.date | date: "%B %-d, %Y" }}</time></span> <span class="byline">by <span class="author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope=""><a class="url fn n" href="/" title="View all posts by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %}" rel="author" itemprop="url"><span class="author-name" itemprop="name">{% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %}</span></a></span></span> 		</div>
 					</header>
 			<div class="post-image">
 						

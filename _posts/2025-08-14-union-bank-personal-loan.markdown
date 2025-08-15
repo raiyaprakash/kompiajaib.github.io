@@ -2,8 +2,8 @@
 layout: post
 title: "Union Bank Personal Loan 2025: ₹50,000 से ₹10 लाख तक घर बैठे पाएं लोन – जानें पूरी प्रक्रिया"
 description: "Union Bank Personal Loan: आज के दौर में जब सभी सेवाएं डिजिटल होती जा रही हैं, बैंकिंग सेक्टर भी इससे अछूता नहीं रहा है। अब पर्सनल लोन जैसे वित्तीय उत्पादों के"
-date: 2025-08-14 08:00:00 +0530
-updated: 2025-08-15 12:30:00 +0530
+date: 2025-08-15 08:00:00 +0530
+last_modified_at: 2025-08-15 12:30:00 +0530
 author: "Rahul Singh"
 tags: [ BankLoan ]
 image: "img/post/Union-Bank-Personal-Loan.jpg"

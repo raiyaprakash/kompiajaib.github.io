@@ -21,8 +21,4 @@ permalink: /:title/
 paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
-plugins:
-  - jekyll-last-modified-at
-
-
 gems: [jekyll-paginate, jekyll-feed, jekyll-sitemap]
